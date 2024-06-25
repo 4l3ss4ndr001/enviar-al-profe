@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>examen</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        function salir(){
+            window.close();
+        }
+        function calcular(){
+            var practica01 = parseFloat(document.getElementById("practica01").value);
+            var practica02 = parseFloat(document.getElementById("practica02").value);
+            var practica03 = parseFloat(document.getElementById("practica03").value);
+            var examenFinal = parseFloat(document.getElementById("examenfinal").value);
+
+            // Verificar si todos los campos tienen valores numéricos y están dentro del rango válido (0-20)
+            if (isNaN(practica01) || isNaN(practica02) || isNaN(practica03) || isNaN(examenFinal)) {
+                alert("Por favor ingresa números válidos en todos los campos.");
+                return;
+            }
+
+            if (practica01 < 0 || practica01 > 20 ||
+                practica02 < 0 || practica02 > 20 ||
+                practica03 < 0 || practica03 > 20 ||
+                examenFinal < 0 || examenFinal > 20) {
+                alert("Los valores deben estar entre 0 y 20.");
+                return;
+            }
+
+
+            var promedioPP = (practica01 + practica02 + practica03) / 3;    
+
+
+            var promedioFinal = (promedioPP + examenFinal) / 2;
+
+
+            var resultado = (promedioFinal >= 10) ? "Aprobado" : "Desaprobado";
+
+
+            document.getElementById("promediopp").value = promedioPP.toFixed(2);
+            document.getElementById("promediofinal").value = promedioFinal.toFixed(2);
+            document.getElementById("resultado").value = resultado;
+            
+
+                
+        }
+        function limpiar(){
+            document.getElementById("practica01").value="";
+            document.getElementById("practica02").value="";
+            document.getElementById("practica03").value="";
+            document.getElementById("promediopp").value="";
+            document.getElementById("examenfinal").value="";
+            document.getElementById("promediofinal").value="";
+            document.getElementById("resultado").value="";
+        }
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <img src="img/certus.png" alt="">
+            </td>
+            <td style="text-align: right;">www.certus.edu.pe</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="img/imagen.jpg" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 40px; color: blue;">lenguajes para el desarrollo y soporte de sistemas</td>
+            <td>
+                <button>
+                    <img src="img/cerrarsesion.png" alt="" onclick="salir();">
+                </button>
+            </td>
+        </tr>
+    </table>
+    <h1>PROMEDIO FINAL</h1>
+    <div class="calcular" align="center">
+        <table>
+            <tr>
+                <td>practica01</td>
+                <td><input class="input" type="number" id="practica01" max="20"></td>
+            </tr>
+            <tr>
+                <td>practica02</td>
+                <td><input class="input" type="number" id="practica02" max="20"></td>
+            </tr>
+            <tr>
+                <td>practica03</td>
+                <td><input class="input" type="number" id="practica03" max="20"></td>
+            </tr>
+            <tr>
+                <td>promedio pp</td>
+                <td><input class="input" type="number" id="promediopp" max="20"></td>
+            </tr>
+            <tr>
+                <td>examen final</td>
+                <td><input class="input" type="number" id="examenfinal" max="20"></td>
+            </tr> 
+            <tr>
+                <td>promedio final</td>
+                <td><input class="input" type="number" id="promediofinal" max="20"></td>
+            </tr> 
+            <tr>
+                <td>resultado</td>
+                <td><input class="input" type="text" id="resultado"></td>
+            </tr>
+            <tr>
+                <td><button onclick="calcular();">calcular</button></td>
+                <td><button onclick="limpiar();">limpiar</button></td>
+                <td><button onclick="imprimir();">imprimir</button></td>
+            </tr>      
+        </table>
+    </div>
+    <h2>autor: alessandro garcia</h2>
+
+    
+    
+</body>
+</html>

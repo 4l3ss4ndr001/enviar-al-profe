@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgb(82, 84, 167),white);
+}
+
+
+.encabezado img{
+    width: 300px;
+}
+.encabezado table a{
+    margin-left: 1200px;
+    font-size: 30px;
+    padding: 5px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+
+
+}
+
+.banner img{
+    width: 1880px;
+    padding: 5px;
+    background-color: black;
+}
+
+.salir td{
+    font-size: 20px;
+}
+
+.salir td img{
+    padding-left: 1280px;
+
+}
+
+.calcular{
+    background: transparent;
+    backdrop-filter: blur(15px);
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 400px;
+    height: 500px;
+    margin-left: 750px;
+    margin-top: 20px;
+
+}
+
+.calcular h1{
+    color: brown;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.calcular input{
+    margin-top: 15px;
+    border: 1px solid;
+    border-radius: 5px;
+
+}
+.calcular button{
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+
+}
+
+footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.encabezado{
+    background-color: aliceblue;
+}
+
+.salir button{
+    background: transparent;
+    border: none;
+}
+
+
